@@ -60,7 +60,7 @@ export async function findVisitorByTicketNumber(ticketNumber: string): Promise<V
     if (!rows) return null;
 
     // ヘッダー行をスキップして検索
-    const visitorRow = rows.slice(1).find(row => row[5] === ticketNumber);
+    const visitorRow = rows.find(row => row[5] === ticketNumber);
     if (!visitorRow) return null;
 
     return {
