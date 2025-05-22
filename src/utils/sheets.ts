@@ -38,6 +38,7 @@ export async function saveVisitorInfo(visitorInfo: VisitorInfo): Promise<void> {
       range: 'Visitors!A:I',
       valueInputOption: 'RAW',
       requestBody: {
+        majorDimension: 'ROWS',
         values,
       },
     });
